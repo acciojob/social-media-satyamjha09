@@ -15,8 +15,6 @@ const CreatePost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!authorId || !title || !content) return;
-    
     dispatch(addPost({
       id: Date.now(),
       title,
@@ -30,22 +28,16 @@ const CreatePost = () => {
 
   return (
     <div className="create-post">
+      <h1>Create New Post</h1>
       <form onSubmit={handleSubmit}>
         <input
-           id="postTitle"
-           type="text"
-           value={title}
-           onChange={(e) => setTitle(e.target.value)}
-           placeholder="Post Title"
-           data-testid="post-title"
-           required
-           style={{
-            display: 'block',
-            width: '100%',
-            padding: '8px',
-            margin: '10px 0',
-            boxSizing: 'border-box'
-          }}
+          id="postTitle"
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Post Title"
+          required
+          style={{ display: 'block', margin: '10px 0', width: '100%' }}
         />
         
         <select 
@@ -71,7 +63,7 @@ const CreatePost = () => {
         <button type="submit">Create Post</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default CreatePost

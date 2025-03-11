@@ -2,33 +2,39 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import Reactions from './Reactions';
 import { addReaction, editPost } from '../store';
+import { useNavigate } from 'react-router-dom';
 
 
 const Post = ({ post }) => {
 
-    const dispatch = useDispatch();
-    const reactionsEmojis = ['👍', '❤️', '😲', '😢', '👎'];
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const reactionsEmojis = ['👍', '❤️', '😲', '😢', '👎'];
 
   return (
     <div className="post">
-      <div className="post-content">
-        <h3>{post.title}</h3>
-        <p>{post.content}</p>
-      </div>
-      <div className="post-actions">
-        <Reactions post={post} />
-        <button 
-          className="button"
-          style={{ 
-            position: 'absolute',
-            right: '0',
-            top: '0',
-            margin: '10px'
-          }}
-          onClick={() => navigate(`/edit/${post.id}`)}
-        >
-          Edit
-        </button>
+      <h3>{post.title}</h3>
+      <p>{post.content}</p>
+      <Reactions post={post} />
+      <button 
+        className="button"
+        onClick={() => navigate(`/edit/${post.id}`)}
+        style={{ position: 'absolute', right: '15px', top: '15px' }}
+      >
+        Edit
+      </button>
+      <div className="reactions-container">
+        {reactionsEmojis.map(emoji => (
+          <button
+            key={emoji}
+            onClick={() => dispatch({
+              type: 'posts/addReaction',
+              payload: { postId: post.id, emoji }
+            })}
+          >
+            {emoji}
+          </button>
+        ))}
       </div>
     </div>
   )

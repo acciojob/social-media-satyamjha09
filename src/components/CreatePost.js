@@ -12,6 +12,7 @@ const CreatePost = () => {
         e.preventDefault();
         dispatch(addPost({
           id: Date.now(),
+          title,
           authorId: Number(authorId),
           content,
           reactions: {}

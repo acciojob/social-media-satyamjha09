@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className="posts-page">
-        <h1>All Posts</h1>
+        <h1>GenZ Social</h1>
         <PostsList posts={posts} />
     </div>
   )

@@ -55,3 +55,27 @@ body {
     padding: 5px;
     border-bottom: 1px solid #eee;
   }
+
+  /* Add to index.css */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .users-list li {
+    cursor: pointer;
+    padding: 8px;
+    list-style-type: none;
+  }
+  
+  .notificationsList {
+    margin-top: 20px;
+    border: 1px solid #eee;
+    padding: 10px;
+  }
+  
+  .reaction-btn {
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }

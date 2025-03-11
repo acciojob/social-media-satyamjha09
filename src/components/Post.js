@@ -15,17 +15,18 @@ const Post = ({ post }) => {
       <div className="post-footer">
         <Reactions post={post} />
         <div className="reactions-container">
-          {reactionsEmojis.map(emoji => (
+        {reactionsEmojis.map(emoji => (
             <button 
-              key={emoji}
-              onClick={() => dispatch(addReaction({
+            key={emoji}
+            className="reaction-btn"
+            onClick={() => dispatch(addReaction({
                 postId: post.id,
                 emoji
-              }))}
+            }))}
             >
-              {emoji}
+            {emoji}
             </button>
-          ))}
+        ))}
         </div>
         <Link to={`/edit/${post.id}`} className="button">
           Edit

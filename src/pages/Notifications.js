@@ -16,11 +16,11 @@ const Notifications = () => {
       >
         Refresh Notifications
       </button>
-      <div className="notifications-list">
+        <section className="notificationsList">
         {notifications.map((notification, index) => (
-          <div key={index}>{notification}</div>
+            <div key={index}>{notification}</div>
         ))}
-      </div>
+        </section>
     </div>
   )
 }

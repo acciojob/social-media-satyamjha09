@@ -12,13 +12,13 @@ const Users = () => {
   return (
     <div className="users-page">
       <h1>Users</h1>
-      <div className="users-list">
+        <div className="users-list">
         {users.map(user => (
-          <div key={user.id} onClick={() => setSelectedUser(user.id)}>
+            <li key={user.id} onClick={() => setSelectedUser(user.id)}>
             {user.name}
-          </div>
+            </li>
         ))}
-      </div>
+        </div>
       
       {selectedUser && (
         <>

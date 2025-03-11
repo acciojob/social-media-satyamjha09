@@ -96,3 +96,23 @@ h1 {
   top: 15px;
 }
 
+/* Add to index.css */
+.post {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.users-list a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #eee;
+}
+
+#postTitle {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}

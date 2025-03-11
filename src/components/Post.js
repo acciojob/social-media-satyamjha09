@@ -11,13 +11,15 @@ const Post = ({ post }) => {
 
   return (
     <div className="post">
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
+      <div className="post-content">
+        <h3>{post.title}</h3>
+        <p>{post.content}</p>
+      </div>
       <div className="post-actions">
         <Reactions post={post} />
-        
         <button 
-          className="button edit-button"
+          className="button"
+          style={{ position: 'absolute', right: '15px', top: '15px' }}
           onClick={() => navigate(`/edit/${post.id}`)}
         >
           Edit

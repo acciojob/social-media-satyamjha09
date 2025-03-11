@@ -40,6 +40,7 @@ const CreatePost = () => {
           placeholder="Post Title"
           required
           className="post-title-input"
+          style={{ display: 'block', margin: '10px 0' }}
         />
         
         <select 

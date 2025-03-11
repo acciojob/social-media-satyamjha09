@@ -83,6 +83,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  display: block !important;
+  opacity: 1 !important;
 }
 
 #postAuthor {
@@ -121,7 +123,9 @@ body {
 }
 
 .edit-button {
-  position: absolute;
+  position: absolute !important;
+  right: 15px !important;
+  top: 15px !important;
   right: 20px;
   top: 20px;
 }
@@ -206,6 +210,12 @@ body {
   padding: 4px 8px;
   background-color: #f8f9fa;
   border-radius: 12px;
+}
+
+.users-list li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
 }
 
 /* Utility Classes */

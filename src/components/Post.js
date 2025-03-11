@@ -7,7 +7,7 @@ import { addReaction, editPost } from '../store';
 const Post = ({ post }) => {
 
     const dispatch = useDispatch();
-  const reactionsEmojis = ['👍', '❤️', '😲', '😢', '👎'];
+    const reactionsEmojis = ['👍', '❤️', '😲', '😢', '👎'];
 
   return (
     <div className="post">

@@ -39,6 +39,7 @@ const CreatePost = () => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Post Title"
           required
+          className="post-title-input"
         />
         
         <select 

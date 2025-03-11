@@ -14,7 +14,12 @@ const Users = () => {
       <h1>Users</h1>
         <div className="users-list">
         {users.map(user => (
-            <li key={user.id} onClick={() => setSelectedUser(user.id)}>
+            <li 
+              key={user.id} 
+              href={`#user-${user.id}`} 
+              className="user-link"
+              onClick={() => setSelectedUser(user.id)}
+            >
             {user.name}
             </li>
         ))}

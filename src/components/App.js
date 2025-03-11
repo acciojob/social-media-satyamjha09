@@ -14,16 +14,19 @@ const App = () => {
   return (
     <Provider store={store}>
        <BrowserRouter>
-         <Navbar />
-         <div className="container">
-          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/users" element={<Users />} />
-              <Route path="/notifications" element={<Notifications />} />
-              <Route path="/create" element={<CreatePost />} />
-              <Route path="/edit/:postId" element={<EditPost />} />
-          </Routes>
-         </div>
+       <div className="App">
+          <h1>GenZ Social</h1>
+          <Navbar />
+          <div className="container">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/users" element={<Users />} />
+                <Route path="/notifications" element={<Notifications />} />
+                <Route path="/create" element={<CreatePost />} />
+                <Route path="/edit/:postId" element={<EditPost />} />
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
     </Provider>
       

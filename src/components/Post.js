@@ -11,26 +11,17 @@ const Post = ({ post }) => {
 
   return (
     <div className="post">
+      <h3>{post.title}</h3>
       <p>{post.content}</p>
-      <div className="post-footer">
+      <div className="post-actions">
         <Reactions post={post} />
-        <div className="reactions-container">
-        {reactionsEmojis.map(emoji => (
-            <button 
-            key={emoji}
-            className="reaction-btn"
-            onClick={() => dispatch(addReaction({
-                postId: post.id,
-                emoji
-            }))}
-            >
-            {emoji}
-            </button>
-        ))}
-        </div>
-        <Link to={`/edit/${post.id}`} className="button">
+        
+        <button 
+          className="button edit-button"
+          onClick={() => navigate(`/edit/${post.id}`)}
+        >
           Edit
-        </Link>
+        </button>
       </div>
     </div>
   )

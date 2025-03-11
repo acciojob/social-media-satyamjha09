@@ -13,16 +13,16 @@ const Users = () => {
     <div className="users-page">
       <h1>Users</h1>
         <div className="users-list">
-        {users.map(user => (
-            <li 
-              key={user.id} 
-              href={`#user-${user.id}`} 
-              className="user-link"
-              onClick={() => setSelectedUser(user.id)}
+          {users.map((user, index) => (
+            <a
+              key={user.id}
+              href={`/users/${user.id}`}
+              className={`user-${index + 1}`}
+              style={{ display: 'block', padding: '10px' }}
             >
-            {user.name}
-            </li>
-        ))}
+              {user.name}
+            </a>
+          ))}
         </div>
       
       {selectedUser && (

@@ -19,7 +19,12 @@ const Post = ({ post }) => {
         <Reactions post={post} />
         <button 
           className="button"
-          style={{ position: 'absolute', right: '15px', top: '15px' }}
+          style={{ 
+            position: 'absolute',
+            right: '15px',
+            top: '15px',
+            zIndex: 1
+          }}
           onClick={() => navigate(`/edit/${post.id}`)}
         >
           Edit

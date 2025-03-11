@@ -21,9 +21,9 @@ const Post = ({ post }) => {
           className="button"
           style={{ 
             position: 'absolute',
-            right: '15px',
-            top: '15px',
-            zIndex: 1
+            right: '0',
+            top: '0',
+            margin: '10px'
           }}
           onClick={() => navigate(`/edit/${post.id}`)}
         >

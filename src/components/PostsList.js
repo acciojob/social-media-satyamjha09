@@ -5,13 +5,9 @@ const PostsList = ({ posts  }) => {
   return (
     <div className="posts-list">
     {posts.map((post, index) => (
-      <div 
-        key={post.id} 
-        className={`post-item-${index + 1}`}
-        style={{ position: 'relative' }}
-      >
-        <Post post={post} />
-      </div>
+      <div key={post.id} className={`post-container-${index + 1}`}>
+      <Post post={post} />
+    </div>
     ))}
   </div>
   )

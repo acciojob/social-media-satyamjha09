@@ -30,7 +30,6 @@ const CreatePost = () => {
 
   return (
     <div className="create-post">
-      <h1>Create New Post</h1>
       <form onSubmit={handleSubmit}>
         <input
            id="postTitle"
@@ -38,8 +37,15 @@ const CreatePost = () => {
            value={title}
            onChange={(e) => setTitle(e.target.value)}
            placeholder="Post Title"
+           data-testid="post-title"
            required
-           style={{ display: 'block', margin: '10px 0', width: '100%' }}
+           style={{
+            display: 'block',
+            width: '100%',
+            padding: '8px',
+            margin: '10px 0',
+            boxSizing: 'border-box'
+          }}
         />
         
         <select 

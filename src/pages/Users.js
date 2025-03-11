@@ -13,14 +13,16 @@ const Users = () => {
     <div className="users-page">
       <h1>Users</h1>
         <ul className="users-list">
-          {users.map(user => (
-            <li 
-              key={user.id}
-              data-testid={`user-${user.id}`}
-              onClick={() => setSelectedUser(user.id)}
-            >
-              {user.name}
-            </li>
+          {users.map((user, index) => (
+            <div key={user.id} className={`user-item-${index + 1}`}>
+              <a
+                
+                href={`/users/${user.id}`}
+                className="user-link"
+              >
+                {user.name}
+              </a>
+            </div>
           ))}
         </ul>
       

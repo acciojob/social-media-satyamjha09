@@ -11,20 +11,20 @@ const Users = () => {
 
   return (
     <div className="users-page">
-      <h1>Users</h1>
         <ul className="users-list">
-          {users.map((user, index) => (
-            <div key={user.id} className={`user-item-${index + 1}`}>
-              <a
-                
-                href={`/users/${user.id}`}
-                className="user-link"
-              >
-                {user.name}
-              </a>
-            </div>
-          ))}
-        </ul>
+        {users.map(user => (
+          <li 
+            key={user.id}
+            style={{
+              display: 'block',
+              padding: '10px',
+              listStyle: 'none'
+            }}
+          >
+            {user.name}
+          </li>
+        ))}
+      </ul>
       
       {selectedUser && (
         <>

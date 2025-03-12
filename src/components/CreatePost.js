@@ -37,7 +37,15 @@ const CreatePost = () => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Post Title"
           required
-          style={{ display: 'block', margin: '10px 0', width: '100%' }}
+          style={{
+            display: 'block',
+            width: '100%',
+            padding: '8px',
+            margin: '10px 0',
+            boxSizing: 'border-box',
+            opacity: 1,
+            visibility: 'visible'
+          }}
         />
         
         <select 

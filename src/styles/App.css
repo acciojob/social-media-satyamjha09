@@ -230,3 +230,12 @@ body {
 .second-post {
   position: relative;
 }
+
+.posts-list > div:nth-child(2) > .button {
+  display: block !important;
+  position: static !important;
+}
+
+.users-list li {
+  display: list-item !important;
+}

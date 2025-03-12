@@ -30,6 +30,7 @@ const CreatePost = () => {
     <div className="create-post">
       <h1>Create New Post</h1>
       <form onSubmit={handleSubmit}>
+        <label id="postTitle">post Title</label>
         <input
           id="postTitle"
           type="text"
